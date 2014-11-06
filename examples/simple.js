@@ -8,8 +8,8 @@ var conference = quickconnect('//switchboard.rtc.io', {
 function getRandomEmail() {
   var emails = [
     'damon.oehlman@gmail.com',
-    'substack@gmail.com',
-    'dominic.tarr@gmail.com'
+    'steelmesh@fluxant.com',
+    'gamebase@fluxant.com'
   ];
 
   return emails[(Math.random() * emails.length) | 0];
