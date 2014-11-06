@@ -1,0 +1,40 @@
+{
+  "name": "facelist",
+  "version": "1.0.0",
+  "description": "A list of faces of people currently active in an application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DamonOehlman/facelist.git"
+  },
+  "keywords": [
+    "webrtc",
+    "ui"
+  ],
+  "author": "Damon Oehlman <damon.oehlman@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DamonOehlman/facelist/issues"
+  },
+  "homepage": "https://github.com/DamonOehlman/facelist",
+  "dependencies": {
+    "brfs": "^1.2.0",
+    "defaultcss": "^1.1.1",
+    "global": "^4.3.0",
+    "gravatar": "^1.1.0",
+    "mercury": "^8.0.0"
+  },
+  "devDependencies": {
+    "attachmediastream": "^1.0.1",
+    "getusermedia": "^1.1.0",
+    "rtc-quickconnect": "^4.0.0"
+  },
+  "browserify": {
+    "transform": [
+      "brfs"
+    ]
+  }
+}
