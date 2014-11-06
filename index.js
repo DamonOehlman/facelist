@@ -5,6 +5,18 @@ var gravatar = require('gravatar');
 var hg = require('mercury');
 var h = require('mercury').h;
 
+/**
+  # facelist
+
+  An experiment using [mercury](https://github.com/Raynos/mercury) and
+  [rtc.io](https://github.com/rtc-io).
+
+  ## Example Usage
+
+  To be completed.
+
+**/
+
 function App(conference) {
   return ObservConference(conference);
 }
