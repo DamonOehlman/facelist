@@ -2,8 +2,7 @@ var facelist = require('..');
 var getUserMedia = require('getusermedia');
 var quickconnect = require('rtc-quickconnect');
 var conference = quickconnect('//switchboard.rtc.io', {
-  room: 'facelist-test',
-  expectedLocalStreams: 1
+  room: 'facelist-test'
 });
 
 function getRandomEmail() {
@@ -26,8 +25,8 @@ setTimeout(function() {
   conference.profile({ email: getRandomEmail() });
 }, Math.random() * 1000);
 
-getUserMedia({ video: true }, function(err, stream) {
-  if (! err) {
-    conference.addStream(stream);
-  }
-});
+// getUserMedia({ video: true }, function(err, stream) {
+//   if (! err) {
+//     conference.addStream(stream);
+//   }
+// });

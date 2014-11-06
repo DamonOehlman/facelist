@@ -27,7 +27,7 @@
     "global": "^4.3.0",
     "gravatar": "^1.1.0",
     "mercury": "^8.0.0",
-    "observ-conference": "^1.1.0"
+    "observ-conference": "^1.2.0"
   },
   "devDependencies": {
     "attachmediastream": "^1.0.1",
