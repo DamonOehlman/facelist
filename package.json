@@ -26,7 +26,6 @@
     "defaultcss": "^1.1.1",
     "global": "^4.3.0",
     "gravatar": "^1.1.0",
-    "mercury": "^8.0.0",
     "observ-conference": "^1.2.0"
   },
   "devDependencies": {
