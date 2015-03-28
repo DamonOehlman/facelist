@@ -6,17 +6,60 @@ An experiment using [mercury](https://github.com/Raynos/mercury) and
 
 [![NPM](https://nodei.co/npm/facelist.png)](https://nodei.co/npm/facelist/)
 
-
+[![bitHound Score](https://www.bithound.io/github/DamonOehlman/facelist/badges/score.svg)](https://www.bithound.io/github/DamonOehlman/facelist) 
 
 ## Example Usage
 
-To be completed.
+```js
+var facelist = require('facelist')();
+var getUserMedia = require('getusermedia');
+var quickconnect = require('rtc-quickconnect');
+var conference = quickconnect('https://switchboard.rtc.io', { room: 'facelist:demo' });
+var hg = require('mercury');
+var h = hg.h;
+
+var state = hg.state({
+  peers: require('observ-conference')(conference)
+});
+
+function getRandomEmail() {
+  var emails = [
+    'damon.oehlman@gmail.com',
+    'steelmesh@fluxant.com',
+    'gamebase@fluxant.com'
+  ];
+
+  return emails[(Math.random() * emails.length) | 0];
+}
+
+function render(state) {
+  return h('div#main', [
+    facelist(state.peers)
+  ]);
+}
+
+conference.createDataChannel('test');
+
+// set a random email address
+setTimeout(function() {
+  conference.profile({ email: getRandomEmail() });
+}, Math.random() * 1000);
+
+getUserMedia({ video: true }, function(err, stream) {
+  if (! err) {
+    conference.addStream(stream);
+  }
+});
+
+hg.app(document.body, state, render);
+
+```
 
 ## License(s)
 
 ### MIT
 
-Copyright (c) 2014 Damon Oehlman <damon.oehlman@gmail.com>
+Copyright (c) 2015 Damon Oehlman <damon.oehlman@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

@@ -12,7 +12,7 @@ var h = require('virtual-hyperscript');
 
   ## Example Usage
 
-  To be completed.
+  <<< examples/simple.js
 
 **/
 
