@@ -26,11 +26,13 @@
     "defaultcss": "^1.1.1",
     "global": "^4.3.0",
     "gravatar": "^1.1.0",
-    "observ-conference": "^1.2.0"
+    "observ-conference": "^1.2.0",
+    "virtual-hyperscript": "^4.6.0"
   },
   "devDependencies": {
     "attachmediastream": "^1.0.1",
     "getusermedia": "^1.1.0",
+    "mercury": "^14.0.0",
     "rtc-quickconnect": "^4.0.0"
   },
   "browserify": {
